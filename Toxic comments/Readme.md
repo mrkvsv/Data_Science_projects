@@ -1,13 +1,13 @@
-# Predicting positive and negative comments from online store users.
+# Предсказание позитивных и негативных комментариев пользователей интернет-магазина.
 
-The online store launches a new service. Now users can edit and supplement product descriptions, just like in wiki communities. That is, clients propose their edits and comment on the changes of others.
-The store needs a tool that will look for toxic comments and submit them for moderation.
+Интернет-магазин запускает новый сервис. Теперь пользователи могут редактировать и дополнять описания товаров, как в вики-сообществах. То есть клиенты предлагают свои правки и комментируют изменения других.
+Магазину нужен инструмент, который будет искать токсичные комментарии и отправлять их на модерацию.
 
-**Task** - to train the model to classify comments into positive and negative.
+**Задача** -  обучить модель классифицировать комментарии на позитивные и негативные.
 
-**Stack:** `numpy` `sklearn` `spacy` `torch` `BERT`
+**Стек:** `numpy` `sklearn` `spacy` `torch` `BERT`
 
-### Conclusion
+### Вывод
 
-Thus, we have prepared data and trained various models.
-The best model in terms of the quality of the F1 metric was LogisticRegression, trained on features prepared by BERT (unitary/toxic-bert), with parameters: C = 1, penalty = 'l2', and a classification threshold of 0.489, which showed an F1 value of 0.95 on the test sample.
+Таким образом, нами подготовлены данные и обучены различные модели. 
+Лучшей моделью по качеству метрики F1 стала LogisticRegression, обученная на признаках, подготовленных BERT (unitary/toxic-bert), с параметрами: C = 1, penalty = 'l2', и порогом классификации 0.489, показавшая на тестовой выборке значение F1 равное 0.95.
